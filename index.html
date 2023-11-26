@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue Seu Agendamento | Demonstração BM Sistemas</title>
+     <!-- CSS only -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/logotipo.png" type="favecon">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+</head>
+<body>
+    <!--conteiner do h1-->
+    <div id="h1" class="container-fluid">
+  <div class="row justify-content-center ">
+      <div class="col-sm-12 text-center text-white">
+
+<div id="logo" class="logo placeholder-wave "><img src="images/logotipo.png" class="img-fluid  " alt="Logobarbearia.png"></div>
+      </div>
+    
+</div>
+</div>
+                          
+       
+</div>
+</nav>
+      <!--Imagens-->
+    <h4 class="text-center">Continue seu agendamento!</h4>
+
+
+<form action="insert.php" method="post"> 
+
+<div id="formulario" class="row">
+   <div class="container " id="container_escolhidos">
+	 <div class="col text-left"></div>
+	 <strong>
+	   <p>Data Escolhida: </p><hr>
+	   <p>Profissional Escolhido:  </p><hr>
+	   <p>Serviço Escolhido:<br>  </p><p></p><hr>
+	   <p>Valor do Serviço: R$,00 </p><p></p><hr>
+	   <a id="buttonadd " class="btn btn-primary agendar" href="https://emersondev1.github.io/lala00/">FINALIZAR!</a>
+	 </strong>
+	 </div>
+   </div>
+	  
+
+
+<!--------------------------------horario-------------------------------------->
+
+   </div>
+ </div>
+</div>
+
+</div>
+ </div>
+ </form>
+
+<footer>
+</footer>
+
+<!--JS de datas-->
+<script>
+function handleCheckbox(checkbox) {
+    var checkboxes = document.getElementsByName("horario[]");
+
+    // Verifica se o checkbox atual foi marcado
+    if (checkbox.checked) {
+        // Percorre todos os checkboxes e desmarca os que forem diferentes do checkbox atual
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i] !== checkbox) {
+                checkboxes[i].checked = false;
+            }
+        }
+    }
+}
+</script>
+
+
+<script>
+  const carousel = new bootstrap.Carousel('#myCarousel')
+</script>
+<script>
+function handleCheckbox(checkbox) {
+    var checkboxes = document.getElementsByName("horario");
+
+    // Verifica se o checkbox atual foi marcado
+    if (checkbox.checked) {
+        // Percorre todos os checkboxes e desmarca os que forem diferentes do checkbox atual
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i] !== checkbox) {
+                checkboxes[i].checked = false;
+            }
+        }
+    }
+}
+</script>
+
+<script>
+    
+
+
+Date.prototype.yyyymmdd = function(days) {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = (this.getDate() < 10 ? "0" + this.getDate() : this.getDate()) + days;
+  return "".concat(yyyy).concat("-").concat(mm).concat("-").concat(dd);
+};
+
+var d = new Date();
+var interval_min = d.yyyymmdd(0);
+var interval_max = d.yyyymmdd(30);
+
+document.getElementById("no-spin").setAttribute("min", interval_min);
+document.getElementById("no-spin").setAttribute("max", interval_max);
+
+</script>
+
+<!--Javascript-->
+<script src="js/funcoes.js"></script>  
+<script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<link href="css/datepicker3.css" rel="stylesheet">
+<script src="js/bootstrap-datepicker.js"></script>
+
+ <script src="js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="js/popper.min.js" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+  
+
+
+
+</body></html>
